@@ -20,21 +20,16 @@ public class PurchaseTest extends BrowserBase {
         cartPage = new CartPage(driver);
         storePage = new InventoryPage(driver);
     }
-
-    @BeforeEach
-    public void simpleLogin() {
-        System.out.println("simple login");
-
-        loginPage.enterUserName("standard_user");
-        loginPage.enterPassword("secret_sauce");
-        loginPage.clickLogin();
-
-    }
-
+    
     @Test
     public void addBackpackCheckout() {
         System.out.println("add backpack");
-
+        
+        //login
+        loginPage.enterUserName("standard_user");
+        loginPage.enterPassword("secret_sauce");
+        loginPage.clickLogin();
+        
         //check image exists
         assertEquals("https://www.saucedemo.com/static/media/sauce-backpack-1200x1500.34e7aa42.jpg",storePage.getImageBackpack().getAttribute("src"));
 
@@ -57,9 +52,6 @@ public class PurchaseTest extends BrowserBase {
         cartPage.finish();
         
         assertEquals("Your order has been dispatched, and will arrive just as fast as the pony can get there!",cartPage.getCompleteText());
-        
-        
-        
     }
 
 }
