@@ -1,0 +1,17 @@
+{
+  "name": "cypressts",
+  "version": "1.0.0",
+  "description": "",
+  "author": "@ObjectiveTester",
+  "license": "ISC",
+  "scripts": {
+    "cypress": "cypress open",
+    "test": "cypress run --headed --browser chrome",
+    "junit": "cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=cypress/results/TEST-[hash].xml,toConsole=true'"
+  },
+  "devDependencies": {
+    "cypress": "^14.5.1",
+    "mocha-junit-reporter": "^2.2.1",
+    "typescript": "^5.8.3"
+  }
+}
