@@ -1,0 +1,17 @@
+{
+  "name": "nightwatchts",
+  "version": "1.0.0",
+  "description": "",
+  "author": "@ObjectiveTester",
+  "license": "ISC",
+  "scripts": {
+    "test": "nightwatch e2e --env chrome",
+    "junit": "nightwatch e2e --reporter=junit --env chrome"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.12.14",
+    "nightwatch": "^3.12.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
