@@ -1,0 +1,16 @@
+{
+  "name": "playwrightts",
+  "version": "1.0.0",
+  "description": "",
+  "author": "@ObjectiveTester",
+  "license": "ISC",
+  "scripts": {
+    "playwright": "npx playwright test --ui",
+    "test": "npx playwright test --reporter=list --headed --project chromium",
+    "junit": "PLAYWRIGHT_JUNIT_OUTPUT_NAME=results.xml npx playwright test --reporter=junit --project chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^22.15.23"
+  }
+}
